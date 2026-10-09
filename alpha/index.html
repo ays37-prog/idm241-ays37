@@ -1,222 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Marshalls "Favorite" Icon Microinteraction - Alpha</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <main>
+    <main id="top">
 
         <div class="logo-container">
             <img src="images/logo.png" alt="Marshalls logo">
         </div>
 
+
         <h3>Marshalls</h3>
+
+        <div class="heart-gif">
+            <img src="images/heart-bounce.gif" alt="heart animation logo">
+        </div>
         
-        <a href="https://www.marshalls.com/us/store/jump/product/Leather-And-Suede-Waterproof-Celeste-Mid-Snow-Boots/4000481235?colorId=NS4154995&pos=0:1" 
-        class="marshalls-link">"Favorite" Icon</a>
+
+        <a href="https://www.marshalls.com/us/store/jump/product/Leather-And-Suede-Waterproof-Celeste-Mid-Snow-Boots/4000481235?colorId=NS4154995&pos=0:1"
+        class="marshalls-link"
+        target="_blank">"Favorite" Icon</a>
+
 
         <div class="container-1">
-        <section>
-            <h1>LOCATION</h1>
+            <section>
+                <h1>LOCATION</h1>
+                <ul>
+                <li>The heart shaped "Favorite" icon is found upon opening the link to the example Marshlls product</li>
+                <li>The icon is located near the center of the
+                    page, in between product photo and description.</li>
 
-            <ul>
-                <li>This heart shaped icon can be found upon opening the link to an example Marshlls product</li>
-
-                <li>
-                    The heart icon is located near the center of the
-                    page, in between product photo and product description.
+                <li>In the default state (unfavorited), the icon has a blue border 
+                    with a white (empty) interior.
                 </li>
-
-                <li>
-                    In its default state (unfavorited) this heart shaped icon has a blue
-                    outline with a white (empty) interior.
-                </li>
-            </ul>
-        </section>
-
-
-        <section>
-            <h1>TRIGGERS</h1>
-
-            <ul>
+                </ul>
+            </section>
+            <section>
+                <h1>TRIGGERS</h1>
+                <ul>
                 <li>Hover ON</li>
                 <li>Hover OFF</li>
                 <li>Click ON</li>
                 <li>Click OFF</li>
-            </ul>
-        </section>
+                 </ul>
+            </section>
+        </div>
+
+
+        <div class="greybox">
+            <h1>FULL MICROINTERACTION ANIMATION</h1>
+            <p>The animation below depicts the microinteraction when the user hovers over the 
+            heart icon, clicks to favorite the product, unclicks to unfaforite the product, 
+            and hovers off.</p>
+            <img src="images/marshalls-favorite-interaction.gif"
+            alt="Marshalls Favorite heart favorite & unfavorite animation">
         </div>
 
 
         <section>
             <h1>RULES</h1>
-
             <h2>Hover ON</h2>
-
-            <ul>
+                <ul>
                 <li>Cursor changes from an arrow to a pointer hand.</li>
-
-                <li>
-                    Product URL preview appears in the bottom left
-                    corner of the browser in small grey text.
-                </li>
-            </ul>
+                </ul>
 
 
             <h2>Hover OFF</h2>
-
-            <ul>
+                <ul>
                 <li>Cursor changes from the pointer hand back to the default arrow.</li>
-
-                <li>
-                    Product URL preview disappears from the bottom left corner of the
-                    browser.
-                </li>
-            </ul>
-
+                </ul>
 
             <h2>Click ON</h2>
-
-            <ul>
+                <ul>
                 <li>Product changes from unfavorited to favorited in the database.</li>
-
-                <li>
-                    Heart icon changes from the white (empty) fill to blue fill.
-                </li>
-
-                <li>
-                    Product heart undergoes one bounce animation, growing then
-                    shrinking before returning to its original size.
-                </li>
-
-                <li>
-                    Favorites heart icon in the top navigation bar also changes from white (empty) fill
-                    to blue fill.
-                </li>
-
-                <li>
-                    Favorites heart icon in the top navigation also performs one
-                    bounce animation, growing then shrinking before returning to its original size.
-                </li>
-
-                <li>
-                    Favorites counter increases by 1 (0 to 1).
-                </li>
-
-                <li>
-                    A confirmation pop up notification appears near the Favorites area under
-                    the top navigation bar.
-                </li>
-
-                <li>
-                    This confirmation notification contains a blue heart icon and the text
-                    “Saved!", giving the user more proof that their action worked successfully. 
-                </li>
-
-                <li>
-                    Snowboots is added to the user's saved Favorites.
-                </li>
-            </ul>
+                <li>Product heart changes from an empty state to a filled state.</li>
+                <li>Product heart performs one bounce animation.</li>
+                <li>Favorites heart in the top navigation changes from an empty state to a filled state.</li>
+                <li>Favorites heart icon in the top navigation also performs one
+                    bounce animation, growing then shrinking before returning to its original size.</li>
+                <li>Favorites heart in the top navigation performs one bounce animation.</li>
+                <li>Favorites counter increases by 1.</li>
+                <li>Product is added to the user's saved Favorites.</li>
+                </ul>
 
 
             <h2>Click OFF</h2>
-
-            <ul>
+                <ul>
                 <li>Product changes from favorited to unfavorited in the database.</li>
-
-                <li>
-                    Product heart changes from the blue fill to white (empty).
-                </li>
-
-                <li>
-                    Product heart undergoes one bounce animation, growing then
-                    shrinking before returning to its original size.
-                </li>
-
-                <li>
-                    Favorites heart icon in the top navigation bar also changes from blue fill
-                    to white (empty) fill.
-                </li>
-
-                <li>
-                    Favorites heart in the top navigation performs one bounce animation, growing then
-                    shrinking before returning to its original size.
-                </li>
-
-                <li>
-                    Favorites counter decreases by 1 (1 to 0).
-                </li>
-
-                <li>
-                    Confirmation pop up notification dissapears from the Favorites area under
-                    the top navigation bar.
-                </li>
-
-                <li>
-                    This confirmation notification contains a blue heart icon and the text
-                    “Saved!", giving the user more proof that their action worked successfully. 
-                </li>
-
-                <li>
-                    Snowboots is removed from the user's saved Favorites.
-                </li>
-            </ul>
+                <li>Product heart changes from a filled state to an empty state.</li>
+                <li>Product heart performs one bounce animation.</li>
+                <li>Favorites heart in the top navigation changes from a filled state to an empty state.</li>
+                <li>Favorites heart in the top navigation performs one bounce animation.</li>
+                <li>Favorites counter decreases by 1.</li>
+                <li>Product is removed from the user's saved Favorites.</li>
+                </ul>
         </section>
 
 
         <section>
-            <h1> FEEDBACK</h1>
-
+            <h1>FEEDBACK</h1>
             <h2>Hover ON</h2>
-
             <ul>
-                <li>Cursor visually changes from an arrow to a pointer hand.</li>
-
-                <li>
-                    Snowboots URL preview becomes visible in the lower-left corner
-                    of the browser.
-                </li>
+            <li>Cursor visually changes from an arrow to a pointer hand.</li>
             </ul>
 
 
             <h2>Hover OFF</h2>
-
             <ul>
-                <li>Cursor visually changes from a pointer hand back to an arrow.</li>
-                <li>Snowboots URL preview disappears.</li>
+            <li>Cursor visually changes from a pointer hand back to an arrow.</li>
             </ul>
 
 
             <h2>Click ON</h2>
 
             <ul>
-                <li>Product heart fills in with blue.</li>
-
-                <li>Product heart visibly grows and shrinks in one bounce
-                    animation.
-                </li>
-
-                <li>Favorites heart in the top navigation fills blue.</li>
-
+                <li>Product heart visibly fills with blue.</li>
+                <li>Product heart visibly grows and shrinks in one bounce animation.</li>
+                <li>Favorites heart in the top navigation visibly fills with blue.</li>
                 <li>
-                    Favorites heart performs the corresponding bounce animation.
-                </li>
-
-                <li>Favorites count visibly increases from 0 to 1.</li>
-
-                <li>
-                    “Saved!” pop up notification appears beneath the Favorites area with a
-                    blue heart icon.
-                </li>
-
+                    Favorites heart visibly performs one bounce animation..</li>
+                <li>Favorites count visibly increases by 1.</li>
+                <li>“Saved!” pop up notification appears.</li>
                 <li>No audible feedback is produced.</li>
                 <li>No haptic feedback occurs.</li>
             </ul>
@@ -225,90 +135,42 @@
             <h2>- Click OFF</h2>
 
             <ul>
-                <li>Product heart returns to its blue outlined state.</li>
-
-                <li>
-                    Product heart visibly grows and shrinks in one bounce
-                    animation.
-                </li>
-
-                <li>
-                    Favorites heart in the top navigation returns to its
-                    default state (blue border, white fill).
-                </li>
-
-                <li>
-                    Favorites heart performs a corresponding bounce animation.
-                </li>
-
-                <li>Favorites count visibly decreases from 1 to 0.</li>
-
+                <li>Product heart visibly returns to its blue outlined state with a white fill.</li>
+                <li>Product heart visibly grows and shrinks in one bounce animation.</li>
+                <li>Favorites heart in the top navigation visibly returns to its default state.</li>
+                <li>Favorites heart visibly performs one bounce animation.</li>
+                <li>Favorites count visibly decreases by 1.</li>
                 <li>“Saved!” pop up notification disappears.</li>
-
                 <li>No audible feedback is produced.</li>
                 <li>No haptic feedback occurs on desktop.</li>
             </ul>
         </section>
 
+        <div class="container-1">
+            <section>
+                <h1>LOOPS</h1>
+                <ul>
+                    <li>The favorite/unfavorite interaction can be repeated each time the user clicks the heart.</li>
+                    <li>Each click triggers one bounce animation before the heart returns to its resting size.</li>
+                    <li>Clicking the heart when it's favorited returns the snowboots to the
+                        unfavorited state in the database.</li>
+                    <li>There is no set limit to how many times the user can switch between the favorited and unfavorited states..</li>
+                    </ul>
+            </section>
 
-        <section>
-            <h1>LOOPS AND MODES</h1>
-
-            <ul>
-                <li>
-                    Favorite heart is the toggle between two states:
-                    unfavorited (default) and favorited.
-                </li>
-
-                <li>
-                    Clicking the heart when it's unfavorited changes the snowboots to the
-                    favorited state in the database.
-                </li>
-
-                <li>
-                    Clicking the heart when it's favorited returns the snowboots to the
-                    unfavorited state in the database.
-                </li>
-
-                <li>
-                    The favorite/unfavorite interaction can reoccur every time the user clicks the
-                    heart.
-                </li>
-
-                <li>
-                    Favorites count relies on the real user's current number of
-                    saved products, rather than always specifically changing from
-                    0 and 1.
-                </li>
-
-                <li>
-                    Favorites heart in the top navigation bar reflects the overall Favorites
-                    state rather than only the state of this individual product.
-                </li>
-
-                <li>
-                    “Saved!” pop up notification depends on if the product is in its 
-                    favorited state.
-                </li>
-            </ul>
-        </section>
-
-        <div class="greybox">
-            <h1>EXISTING MICROINTERACTION</h1>
-
-            <p>
-                The animation below depicts the existing Marshalls Favorite
-                microinteraction when browsing a sample product of snowboots. 
-                The animation showcases the results upon changing hover states, favoriting, and unfavoriting the item.
-            </p>
-
-            <img
-                src="images/marshalls-favorite-interaction.gif"
-                alt="Marshalls Favorite heart favorite & unfavorite animation">
+            <section>
+                <h1>MODES</h1>
+                <ul>
+                    <li>Favoriting the product temporarily activates a confirmation mode that displays a “Saved!” popup near the Favorites area of the top navigation.</li>
+                    <li>The “Saved!” popup contains a blue heart icon and confirmation text to reinforce that the product was successfully saved.</li>
+                    <li>The confirmation mode ends when the popup disappears.</li>
+                    </ul>
+            </section>
         </div>
 
+        <br>
+
+    <a href="#top" class="marshalls-link">Jump Back to Top</a>
     </main>
-
 </body>
-
 </html>
