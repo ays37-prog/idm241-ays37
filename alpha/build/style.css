@@ -127,7 +127,7 @@ body {
 .description {
     width: min(800px, 90%);
     margin: 0 auto 50px;
-    background-color: rgb(242, 225, 201);
+    background-color: rgb(246, 232, 211);
     padding: 40px;
     border-radius: 20px;
     border-left: 4px solid rgb(10, 10, 179);
