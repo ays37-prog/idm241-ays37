@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marshalls Favorite Microinteraction - Alpha</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- MICROINTERACTION -->
+        <section class="microinteraction-container">
+
+            <button
+                class="favorite-button"
+                id="favoriteButton"
+                type="button"
+                aria-label="Add to favorites"
+                aria-pressed="false"
+            >
+
+                <svg
+                    class="heart-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M12 21
+                        C10.8 19.9 5 15.3 2.7 11.7
+                        C0.8 8.7 1.5 5.1 4.4 3.6
+                        C6.7 2.4 9.4 3 12 5.5
+                        C14.6 3 17.3 2.4 19.6 3.6
+                        C22.5 5.1 23.2 8.7 21.3 11.7
+                        C19 15.3 13.2 19.9 12 21Z"
+                    />
+                </svg>
+
+            </button>
+
+        </section>
+
+
+        <!-- ASSIGNMENT DESCRIPTION -->
+        <section class="description">
+
+            <h2>Triggers</h2>
+
+            <p>
+                The microinteraction begins when the user hovers their mouse
+                over the heart icon. The cursor changes from the standard arrow
+                to a pointer, indicating that the heart is clickable. Clicking
+                the heart adds the product to Favorites. Clicking the heart
+                again removes the product from Favorites.
+            </p>
+
+
+            <h2>Rules</h2>
+
+            <p>
+                When the heart is not selected, it appears as a blue outline
+                with an unfilled center. When the user clicks the heart, the
+                selected state is activated and the heart fills blue. If the
+                user clicks the heart again, the selected state is removed and
+                the heart returns to its original outlined appearance.
+            </p>
+
+
+            <h2>Feedback</h2>
+
+            <p>
+                When the user's cursor is over the heart, the cursor changes
+                into a pointer and the heart responds with a subtle hover
+                animation. When clicked, the heart quickly shrinks and expands
+                to create a bounce or pop effect while changing from an
+                outlined heart to a solid blue heart. When deselected, the
+                heart animates again and returns to its outlined state.
+            </p>
+
+
+            <h2>Loops &amp; Modes</h2>
+
+            <p>
+                The heart has two modes: favorited and unfavorited. The user
+                can repeatedly switch between these modes by clicking the
+                heart. Each click updates the appearance of the icon and
+                repeats the corresponding animation.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

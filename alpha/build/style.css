@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto auto;
+    font-family: Arial, sans-serif;
+    color: #222;
+    width: 70%;
+}
+
+
+/* MICROINTERACTION AREA */
+
+.microinteraction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* FAVORITE BUTTON */
+
+.favorite-button {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    /* normal state is arrow */
+    cursor: default;
+}
+
+
+    /* hover state point4er finger */
+
+.favorite-button:hover {
+    cursor: pointer;
+}
+
+
+/* HEART ICON */
+
+.heart-icon {
+    width: 55px;
+    height: 55px;
+
+    overflow: visible;
+
+    fill: white;
+    stroke: #003da5;
+    stroke-width: 1.8;
+    stroke-linejoin: round;
+
+    transform-origin: center;
+
+    transition:
+        fill 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* HOVER */
+
+.favorite-button:hover .heart-icon {
+    transform: scale(1.08);
+}
+
+
+/* MOUSE LEAVES */
+
+.favorite-button:not(:hover) .heart-icon {
+    transform: scale(1);
+}
+
+
+/* FAVORITED */
+
+.favorite-button.is-favorite .heart-icon {
+    fill: #003da5;
+}
+
+
+/* CLICK BOUNCE ANIMATION */
+
+.favorite-button.bounce .heart-icon {
+    animation: heartBounce 0.45s ease;
+}
+
+
+@keyframes heartBounce {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.80);
+    }
+
+    55% {
+        transform: scale(1.22);
+    }
+
+    75% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ASSIGNMENT DESCRIPTION */
+
+.description {
+    width: min(800px, 90%);
+    margin: 0 auto 80px;
+}
+
+.description h2 {
+    margin-top: 35px;
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.description p {
+    margin-top: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
