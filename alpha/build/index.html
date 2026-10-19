@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Marshalls Favorite Microinteraction - Alpha</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
@@ -45,57 +47,202 @@
         </section>
 
 
-        <!-- ASSIGNMENT DESCRIPTION -->
+
+        <!-- TRIGGERS -->
         <section class="description">
 
-            <h2>Triggers</h2>
+            <h2>TRIGGERS</h2>
 
-            <p>
-                The microinteraction begins when the user hovers their mouse
-                over the heart icon. The cursor changes from the standard arrow
-                to a pointer, indicating that the heart is clickable. Clicking
-                the heart adds the product to Favorites. Clicking the heart
-                again removes the product from Favorites.
-            </p>
-
-
-            <h2>Rules</h2>
-
-            <p>
-                When the heart is not selected, it appears as a blue outline
-                with an unfilled center. When the user clicks the heart, the
-                selected state is activated and the heart fills blue. If the
-                user clicks the heart again, the selected state is removed and
-                the heart returns to its original outlined appearance.
-            </p>
-
-
-            <h2>Feedback</h2>
-
-            <p>
-                When the user's cursor is over the heart, the cursor changes
-                into a pointer and the heart responds with a subtle hover
-                animation. When clicked, the heart quickly shrinks and expands
-                to create a bounce or pop effect while changing from an
-                outlined heart to a solid blue heart. When deselected, the
-                heart animates again and returns to its outlined state.
-            </p>
-
-
-            <h2>Loops &amp; Modes</h2>
-
-            <p>
-                The heart has two modes: favorited and unfavorited. The user
-                can repeatedly switch between these modes by clicking the
-                heart. Each click updates the appearance of the icon and
-                repeats the corresponding animation.
-            </p>
+            <h3>Hover ON</h3>
+            <h3>Hover OFF</h3>
+            <h3>Click ON</h3>
+            <h3>Click OFF</h3>
 
         </section>
 
+
+
+        <!-- RULES -->
+        <section class="description">
+
+            <h2>RULES</h2>
+
+            <h3>Hover ON</h3>
+
+            <ul>
+                <li>
+                    Cursor changes from an arrow to a pointer hand.
+                </li>
+
+                <li>
+                    Heart slightly increases in size from 1.0 to 1.08.
+                </li>
+            </ul>
+
+
+            <h3>Hover OFF</h3>
+
+            <ul>
+                <li>
+                    Cursor changes from pointer hand back to the
+                    default arrow.
+                </li>
+
+                <li>
+                    Heart returns to its original size from 1.08 to 1.0.
+                </li>
+            </ul>
+
+
+            <h3>Click ON</h3>
+
+            <ul>
+                <li>
+                    Heart changes from a the white/empty state to a solid blue filled state, with a blue outline.
+                </li>
+
+                <li>
+                    Heart performs one bounce animation (shrinking in size to 0.8, then growing to 1.22, then shrinking to .95, and finally growing back to 1.0).
+                </li>
+
+                <li>
+                    Product changes from unfavorited to favorited in the database.
+                </li>
+            </ul>
+
+
+            <h3>Click OFF</h3>
+
+            <ul>
+                <li>
+                    Heart changes from a blue filled state to a solid white/empty state, with only a blue outline.
+                </li>
+
+                <li>
+                    Heart performs one bounce animation (shrinking in size to 0.8, then growing to 1.22, then shrinking to .95, and finally growing back to 1.0).
+                </li>
+
+                <li>
+                    Product changes from favorited to unfavorited in the database.
+                </li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- FEEDBACK -->
+        <section class="description">
+
+            <h2>FEEDBACK</h2>
+
+
+            <h3>Hover ON</h3>
+
+            <ul>
+                <li>
+                    Cursor visually changes from an arrow to a pointer hand.
+                </li>
+
+                <li>
+                    Heart slightly increases in size from 1.0 to 1.08.
+                </li>
+            </ul>
+
+
+            <h3>Hover OFF</h3>
+
+            <ul>
+                <li>
+                    Cursor visually changes from a pointer hand back to
+                    an arrow.
+                </li>
+
+                <li>
+                    Heart returns to its original size from 1.08 to 1.0.
+                </li>
+            </ul>
+
+
+            <h3>Click ON</h3>
+
+            <ul>
+                <li>
+                    Heart changes from a the white/empty state to a solid blue filled state, with a blue outline.
+                </li>
+
+                <li>
+                    Heart performs one bounce animation (shrinking in size to 0.8, then growing to 1.22, then shrinking to .95, and finally growing back to 1.0).
+                </li>
+
+            </ul>
+
+
+            <h3>Click OFF</h3>
+
+            <ul>
+                <li>
+                    Heart changes from a blue filled state to a solid white/empty stat, with only a blue outline.
+
+                </li>
+
+                <li>
+                    Heart performs one bounce animation (shrinking in size to 0.8, then growing to 1.22, then shrinking to .95, and finally growing back to 1.0).
+                </li>
+            </ul>
+
+        </section>
+
+
+
+        <!-- LOOPS AND MODES -->
+        <div class="loops-modes-container">
+
+
+            <!-- LOOPS -->
+            <section class="description loops">
+
+                <h2>LOOPS</h2>
+
+                <ul>
+                    <li>
+                        There is no set limit to how many times the user can
+                        switch between the favorited and unfavorited states.
+                    </li>
+                </ul>
+
+            </section>
+
+
+
+            <!-- MODES -->
+            <section class="description modes">
+
+                <h2>MODES</h2>
+
+                <ul>
+                    <li>
+                        Clicking the heart switches the database between
+                        its favorited and unfavorited modes.
+                    </li>
+
+                    <li>
+                        The selected mode remains active until the user
+                        clicks the heart again, switching it to the state 
+                        it is not currently on. 
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </div>
+
     </main>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -126,11 +126,14 @@ body {
 
 .description {
     width: min(800px, 90%);
-    margin: 0 auto 80px;
+    margin: 0 auto 50px;
+    background-color: rgb(242, 225, 201);
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 4px solid rgb(10, 10, 179);
 }
 
 .description h2 {
-    margin-top: 35px;
     margin-bottom: 8px;
     font-size: 22px;
 }
@@ -139,4 +142,8 @@ body {
     margin-top: 0;
     font-size: 17px;
     line-height: 1.6;
+}
+
+li {
+    line-height: 1.5rem;
 }
