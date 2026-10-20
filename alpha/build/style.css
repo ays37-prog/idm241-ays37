@@ -95,6 +95,7 @@ body {
 
 .favorite-button.bounce .heart-icon {
     animation: heartBounce 0.45s ease;
+    
 }
 
 
