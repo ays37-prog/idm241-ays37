@@ -30,12 +30,16 @@ h1 {
 h2 {
     font-size: 15px;
     font-weight: bold;
+    margin-bottom: 0px;
+
 }
 
 p,
 li {
     font-size: 15px;
     font-weight: normal;
+    margin-top: 5px;
+    line-height: 1.2rem;
 }
 
 
@@ -48,20 +52,6 @@ li {
     background-color: rgb(235, 235, 235);
     text-align: center;
     padding: 50px 30px;
-}
-
-.other-container {
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    margin-top: 30px;
-
-}
-
-.other-container p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
