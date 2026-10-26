@@ -1,181 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marshalls "Favorite" Icon Microinteraction - Alpha</title>
+
+    <title>Marhslls Beta Description</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
+
 <body>
-    <main id="top">
 
+    <section class="gray-container">
         <div class="logo-container">
-            <img src="images/logo.png" alt="Marshalls logo">
+        <img src="images/logo.png" alt="Marshalls logo">
         </div>
 
+        <h1>Marshalls</h1>
+        <h2>Beta Description</h2>
+        <p>Interaction:</p>
 
-        <h3>Marshalls</h3>
+        <a href="https://www.marshalls.com/us/store/jump/product/new-arrivals/6pc-Teakwood-Utensil-Set/4000456779?colorId=NS4154737&pos=1:17&N=842114098"
+        class="blue-button"
+        target="_blank">Favoriing an Item</a>
+    </section>
 
-        <div class="heart-gif">
-            <img src="images/heart-bounce.gif" alt="heart animation logo">
-        </div>
-        
-
-        <a href="https://www.marshalls.com/us/store/jump/product/Leather-And-Suede-Waterproof-Celeste-Mid-Snow-Boots/4000481235?colorId=NS4154995&pos=0:1"
-        class="marshalls-link"
-        target="_blank">"Favorite" Icon</a>
-
-
-        <div class="container-1">
-            <section>
-                <h1>LOCATION</h1>
-                <ul>
-                <li>The heart shaped "Favorite" icon is found upon opening the link to the example Marshlls product</li>
-                <li>The icon is located near the center of the
-                    page, in between product photo and description.</li>
-
-                <li>In the default state (unfavorited), the icon has a blue border 
-                    with a white (empty) interior.
-                </li>
-                </ul>
-            </section>
-
-            <section>
-                <h1>TRIGGERS</h1>
-                <ul>
-                <li>Hover ON</li>
-                <li>Hover OFF</li>
-                <li>Click ON</li>
-                <li>Click OFF</li>
-                 </ul>
-            </section>
-        </div>
+    <section class="other-container">
+        <h1>LOCATION</h1>
+        <p>The heart shaped "Favorite" icon is found upon opening the link to the example Marshlls product</li>
+            The icon is located near the center of the
+            page, in between product photo and description.
+            In the default state (unfavorited), the icon has a blue border 
+            with a white (empty) interior.</p>
+    </section>
 
 
-        
+    <!-- THREE BLUE COLUMNS -->
 
+    <main class="main-grid">
 
-        <section>
-            <h1>RULES</h1>
-            <h2>Hover ON</h2>
-                <ul>
-                <li>Cursor changes from an arrow to a pointer hand.</li>
-                </ul>
+        <!-- COLUMN 1 -->
 
+        <section class="blue-container">
+            <h1>Favortie Toggle</h1>
 
-            <h2>Hover OFF</h2>
-                <ul>
-                <li>Cursor changes from the pointer hand back to the default arrow.</li>
-                </ul>
+            <div class="white-container">
+                <h2>Box 1</h2>
+                <p>Content goes here.</p>
+            </div>
 
-            <h2>Click ON</h2>
-                <ul>
-                <li>Product changes from unfavorited to favorited in the database.</li>
-                <li>Product heart changes from an empty state to a filled state.</li>
-                <li>Product heart performs one bounce animation.</li>
-                <li>Favorites heart in the top navigation changes from an empty state to a filled state.</li>
-                <li>Favorites heart icon in the top navigation also performs one
-                    bounce animation, growing then shrinking before returning to its original size.</li>
-                <li>Favorites heart in the top navigation performs one bounce animation.</li>
-                <li>Favorites counter increases by 1.</li>
-                <li>Product is added to the user's saved Favorites.</li>
-                </ul>
+            <div class="white-container">
+                <h2>Box 2</h2>
+                <p>Content goes here.</p>
+            </div>
 
+            <div class="white-container">
+                <h2>Box 3</h2>
+                <p>Content goes here.</p>
+            </div>
 
-            <h2>Click OFF</h2>
-                <ul>
-                <li>Product changes from favorited to unfavorited in the database.</li>
-                <li>Product heart changes from a filled state to an empty state.</li>
-                <li>Product heart performs one bounce animation.</li>
-                <li>Favorites heart in the top navigation changes from a filled state to an empty state.</li>
-                <li>Favorites heart in the top navigation performs one bounce animation.</li>
-                <li>Favorites counter decreases by 1.</li>
-                <li>Product is removed from the user's saved Favorites.</li>
-                </ul>
+            <div class="white-container">
+                <h2>Box 4</h2>
+                <p>Content goes here.</p>
+            </div>
+
         </section>
 
 
-        <section>
-            <h1>FEEDBACK</h1>
-            <h2>Hover ON</h2>
-            <ul>
-            <li>Cursor visually changes from an arrow to a pointer hand.</li>
-            </ul>
+        <!-- COLUMN 2 -->
 
+        <section class="blue-container">
+            <h1>Favorites Counter</h1>
 
-            <h2>Hover OFF</h2>
-            <ul>
-            <li>Cursor visually changes from a pointer hand back to an arrow.</li>
-            </ul>
+            <div class="white-container">
+                <h2>Box 5</h2>
+                <p>Content goes here.</p>
+            </div>
 
+            <div class="white-container">
+                <h2>Box 6</h2>
+                <p>Content goes here.</p>
+            </div>
 
-            <h2>Click ON</h2>
+            <div class="white-container">
+                <h2>Box 7</h2>
+                <p>Content goes here.</p>
+            </div>
 
-            <ul>
-                <li>Product heart visibly fills with blue.</li>
-                <li>Product heart visibly grows and shrinks in one bounce animation.</li>
-                <li>Favorites heart in the top navigation visibly fills with blue.</li>
-                <li>
-                    Favorites heart visibly performs one bounce animation..</li>
-                <li>Favorites count visibly increases by 1.</li>
-                <li>“Saved!” pop up notification appears.</li>
-                <li>No audible feedback is produced.</li>
-                <li>No haptic feedback occurs.</li>
-            </ul>
+            <div class="white-container">
+                <h2>Box 8</h2>
+                <p>Content goes here.</p>
+            </div>
 
-
-            <h2>- Click OFF</h2>
-
-            <ul>
-                <li>Product heart visibly returns to its blue outlined state with a white fill.</li>
-                <li>Product heart visibly grows and shrinks in one bounce animation.</li>
-                <li>Favorites heart in the top navigation visibly returns to its default state.</li>
-                <li>Favorites heart visibly performs one bounce animation.</li>
-                <li>Favorites count visibly decreases by 1.</li>
-                <li>“Saved!” pop up notification disappears.</li>
-                <li>No audible feedback is produced.</li>
-                <li>No haptic feedback occurs on desktop.</li>
-            </ul>
         </section>
 
-        <div class="container-1">
-            <section>
-                <h1>LOOPS</h1>
-                <ul>
-                    <li>The favorite/unfavorite interaction can be repeated each time the user clicks the heart.</li>
-                    <li>Each click triggers one bounce animation before the heart returns to its resting size.</li>
-                    <li>Clicking the heart when it's favorited returns the snowboots to the
-                        unfavorited state in the database.</li>
-                    <li>There is no set limit to how many times the user can switch between the favorited and unfavorited states..</li>
-                    </ul>
-            </section>
 
-            <section>
-                <h1>MODES</h1>
-                <ul>
-                    <li>Favoriting the product temporarily activates a confirmation mode that displays a “Saved!” popup near the Favorites area of the top navigation.</li>
-                    <li>The “Saved!” popup contains a blue heart icon and confirmation text to reinforce that the product was successfully saved.</li>
-                    <li>The confirmation mode ends when the popup disappears.</li>
-                    </ul>
-            </section>
-        </div>
+        <!-- COLUMN 3 -->
 
-        <div class="greybox">
-            <h1>FULL MICROINTERACTION ANIMATION</h1>
-            <p>The animation below depicts the microinteraction when the user hovers over the 
-            heart icon, clicks to favorite the product, unclicks to unfaforite the product, 
-            and hovers off.</p>
-            <img class="interaction-gif"
-            src="images/marshalls-favorite-interaction.gif"
-            alt="Marshalls Favorite heart favorite & unfavorite animation">
-        </div>
+        <section class="blue-container">
+            <h1>Confirmation Notification</h1>
 
-        <br>
-        <br>
+            <div class="white-container">
+                <h2>Box 9</h2>
+                <p>Content goes here.</p>
+            </div>
 
-    <a href="#top" class="marshalls-link">Jump Back to Top</a>
+            <div class="white-container">
+                <h2>Box 10</h2>
+                <p>Content goes here.</p>
+            </div>
+
+            <div class="white-container">
+                <h2>Box 11</h2>
+                <p>Content goes here.</p>
+            </div>
+
+            <div class="white-container">
+                <h2>Box 12</h2>
+                <p>Content goes here.</p>
+            </div>
+
+        </section>
+
     </main>
+
+
+    <!-- BOTTOM GRAY SECTION -->
+
+    <section class="gray-container">
+
+        <h1>Full Microinteraction Animation</h1>
+
+        <p>The gif below showcases all microinteractions that occur upon interacting 
+            with the favorite/unfavorite heart icon.
+        </p>
+
+        <img class="interaction-gif"
+            src="images/interaction.gif"
+            alt="Marshalls Favorite heart favorite & unfavorite animation">
+
+    </section>
+
 </body>
+
 </html>
