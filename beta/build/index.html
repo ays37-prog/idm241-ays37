@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorite Heart Microinteraction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="heart-container">
+
+    <!-- NAVIGATION FAVORITES HEART -->
+
+    <button
+        class="nav-favorite-button"
+        id="navFavoriteButton"
+        type="button"
+        aria-label="Open favorites"
+    >
+
+        <span class="nav-label">Favorites</span>
+
+        <span class="nav-heart-wrapper">
+
+            <!-- Three streaks -->
+            <span class="nav-streaks" aria-hidden="true">
+                <span class="streak streak-left"></span>
+                <span class="streak streak-middle"></span>
+                <span class="streak streak-right"></span>
+            </span>
+
+            <!-- Navigation heart -->
+            <svg
+                class="nav-heart"
+                viewBox="0 0 100 90"
+                aria-hidden="true"
+            >
+                <path
+                    d="M50 82
+                       C44 76 12 55 7 32
+                       C3 13 16 4 30 5
+                       C40 5 47 11 50 18
+                       C53 11 60 5 70 5
+                       C84 4 97 13 93 32
+                       C88 55 56 76 50 82Z"
+                />
+            </svg>
+
+        </span>
+
+    </button>
+
+
+
+    <!-- MAIN FAVORITE HEART -->
+
+    <button
+        class="favorite-button"
+        id="favoriteButton"
+        type="button"
+        aria-label="Add to favorites"
+        aria-pressed="false"
+    >
+
+        <!-- Normal heart -->
+        <svg
+            class="heart normal-heart"
+            viewBox="0 0 100 90"
+            aria-hidden="true"
+        >
+            <path
+                d="M50 82
+                   C44 76 12 55 7 32
+                   C3 13 16 4 30 5
+                   C40 5 47 11 50 18
+                   C53 11 60 5 70 5
+                   C84 4 97 13 93 32
+                   C88 55 56 76 50 82Z"
+            />
+        </svg>
+
+
+        <!-- Broken heart -->
+        <svg
+            class="broken-heart"
+            viewBox="0 0 120 100"
+            aria-hidden="true"
+        >
+
+            <path
+                class="broken-left"
+                d="M58 90
+                   C47 80 14 59 9 34
+                   C5 15 18 5 33 6
+                   C45 6 53 14 59 24
+                   L51 38
+                   L59 49
+                   L50 61
+                   L58 90Z"
+            />
+
+            <path
+                class="broken-right"
+                d="M62 90
+                   L70 61
+                   L61 49
+                   L69 38
+                   L61 24
+                   C67 14 75 6 87 6
+                   C102 5 115 15 111 34
+                   C106 59 73 80 62 90Z"
+            />
+
+        </svg>
+
+    </button>
+
+</main>
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+    background-color: white;
+}
+
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* BIG HEART BUTTON */
+
+.favorite-button {
+    position: relative;
+    width: 150px;
+    height: 140px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* BIG NORMAL HEART */
+
+.normal-heart {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    overflow: visible;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+.normal-heart path {
+    fill: white;
+    stroke: #0647f5;
+    stroke-width: 4;
+    stroke-linejoin: round;
+    transition:
+        fill 0.25s ease,
+        stroke 0.25s ease;
+}
+
+
+/* BIG HEART HOVER ON */
+
+.favorite-button:hover .normal-heart {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+    filter:
+        drop-shadow(0 0 10px rgba(6, 71, 245, 0.3));
+}
+
+
+/* BIG HEART FAVORITED */
+
+.favorite-button.is-favorite .normal-heart path {
+    fill: #0647f5;
+    stroke: #0647f5;
+}
+
+
+/* Favorited + Hover */
+
+.favorite-button.is-favorite:hover .normal-heart {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+    filter:
+        drop-shadow(0 0 12px rgba(6, 71, 245, 0.35));
+}
+
+
+/* BIG HEART BROKEN HEART */
+
+.broken-heart {
+    position: absolute;
+    width: 135px;
+    height: 125px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    display: none;
+}
+
+
+.broken-left,
+.broken-right {
+    fill: #0647f5;
+}
+
+
+/* BREAKING STATE */
+
+.favorite-button.is-breaking .normal-heart {
+    display: none;
+}
+
+
+.favorite-button.is-breaking .broken-heart {
+    display: block;
+}
+
+
+/* BIG HEART - LEFT */
+
+.favorite-button.is-breaking .broken-left {
+    transform-origin: center;
+    animation: breakLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* BIG HEART - RIGHT HALF */
+
+.favorite-button.is-breaking .broken-right {
+    transform-origin: center;
+    animation: breakRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* HEART BREAK ANIMATIONS */
+
+@keyframes breakLeft {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-24px) rotate(-8deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes breakRight {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(24px) rotate(8deg);
+        opacity: 0;
+    }
+}
+
+
+
+/* HEART CONTAINER */
+
+.heart-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+}
+
+
+
+/* NAVIGATION FAVORITES BUTTON */
+
+.nav-favorite-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+    background: transparent;
+
+    padding: 20px;
+
+    cursor: default;
+
+    font-family: inherit;
+    color: black;
+}
+
+
+
+/* FAVORITES TEXT */
+
+.nav-label {
+    font-size: 28px;
+}
+
+
+
+/* NAV HEART WRAPPER */
+
+.nav-heart-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 70px;
+}
+
+
+
+/* NAV HEART */
+
+.nav-heart {
+    width: 55px;
+    height: 55px;
+
+    overflow: visible;
+
+    transform: scale(1);
+
+    transition: transform 0.2s ease;
+}
+
+
+.nav-heart path {
+    fill: white;
+
+    stroke: #0647f5;
+    stroke-width: 8;
+
+    stroke-linejoin: round;
+}
+
+
+
+/* THREE STREAKS */
+
+.nav-streaks {
+    position: absolute;
+
+    width: 55px;
+    height: 30px;
+
+    left: 50%;
+    top: -15px;
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.streak {
+    position: absolute;
+
+    width: 4px;
+    height: 13px;
+
+    background-color: #0647f5;
+
+    border-radius: 10px;
+}
+
+
+
+/* LEFT STREAK */
+
+.streak-left {
+    left: 7px;
+    top: 9px;
+
+    transform: rotate(-35deg);
+}
+
+
+
+/* MIDDLE STREAK */
+
+.streak-middle {
+    left: 50%;
+    top: 2px;
+
+    transform: translateX(-50%);
+}
+
+
+
+/* RIGHT STREAK */
+
+.streak-right {
+    right: 7px;
+    top: 9px;
+
+    transform: rotate(35deg);
+}
+
+
+
+/* NAV HEART — HOVER ON */
+
+.nav-favorite-button:hover {
+    cursor: pointer;
+}
+
+
+.nav-favorite-button:hover .nav-heart {
+    transform: scaleX(0.8) scaleY(0.8);
+}
+
+
+.nav-favorite-button:hover .nav-streaks {
+    opacity: 1;
+}
+
+
+
+/* NAV HEART — MOUSE DOWN */
+
+.nav-favorite-button:active .nav-heart {
+    transform: scale(1.2);
+}
+
+
+.nav-favorite-button:active .nav-streaks {
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        scale(1.2);
+}
+
+
+
+/* POP CAUSED BY MAIN HEART */
+
+.nav-favorite-button.nav-pop .nav-heart {
+    animation: navHeartPop 0.6s ease;
+}
+
+
+.nav-favorite-button.nav-pop .nav-streaks {
+    animation: navStreakPop 0.6s ease;
+}
+
+
+
+/* HEART POP */
+
+@keyframes navHeartPop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.3);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* STREAK POP */
+
+@keyframes navStreakPop {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateX(-50%)
+            scale(0.5);
+    }
+
+    30% {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scale(1.25);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+}
