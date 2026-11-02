@@ -18,7 +18,7 @@ body {
     justify-content: flex-start;
     align-items: center;
 
-    padding-top: 100px;
+    padding-top: 10px;
 
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -276,15 +276,14 @@ h2 {
 
 .nav-favorite-button {
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 
     border: none;
     background: transparent;
 
-    padding: 20px;
+    padding: 5px 10px;
+    margin: 0;
 
     cursor: default;
 
@@ -629,4 +628,27 @@ h2 {
         grid-template-columns: 1fr;
     }
 
+}
+
+
+/* CREATES THE NAVIGATION BAR AT THE TOP OF THE PAGE */
+
+.navbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 30px;
+
+    min-height: 0;
+    height: auto;
+
+    margin: 0;
+    margin-bottom: 20px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #dddddd;
 }
