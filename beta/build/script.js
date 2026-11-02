@@ -134,15 +134,8 @@ favoriteButton.addEventListener("click", function () {
 
 
 
-/* NAVIGATION HEART — MOUSE UP / CLICK */
+/* OPENS FAVORITES PAGE WHEN NAV HEART IS CLICKED */
 
-navFavoriteButton.addEventListener(
-    "click",
-    function () {
-
-    
-
-        console.log("Open Favorites page");
-
-    }
-);
+navFavoriteButton.addEventListener("click", function () {
+    window.location.href = "favorites.html";
+});

@@ -1,182 +1,37 @@
+/* MAKES WIDTH AND HEIGHT CALCULATIONS INCLUDE PADDING AND BORDERS */
+
 * {
     box-sizing: border-box;
 }
 
 
+
+/* STACKS THE HEART AREA ABOVE THE INFORMATION AREA */
+
 body {
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 100px;
-    background-color: white;
-}
 
-
-.heart-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
+    justify-content: flex-start;
     align-items: center;
+
+    padding-top: 100px;
+
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
 }
 
-
-/* BIG HEART BUTTON */
-
-.favorite-button {
-    position: relative;
-    width: 150px;
-    height: 140px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-
-/* BIG NORMAL HEART */
-
-.normal-heart {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    overflow: visible;
-    transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
-}
-
-
-.normal-heart path {
-    fill: white;
-    stroke: #0647f5;
-    stroke-width: 4;
-    stroke-linejoin: round;
-    transition:
-        fill 0.25s ease,
-        stroke 0.25s ease;
-}
-
-
-/* BIG HEART HOVER ON */
-
-.favorite-button:hover .normal-heart {
-    transform:
-        translate(-50%, -50%)
-        scale(1.08);
-    filter:
-        drop-shadow(0 0 10px rgba(6, 71, 245, 0.3));
-}
-
-
-/* BIG HEART FAVORITED */
-
-.favorite-button.is-favorite .normal-heart path {
-    fill: #0647f5;
-    stroke: #0647f5;
-}
-
-
-/* Favorited + Hover */
-
-.favorite-button.is-favorite:hover .normal-heart {
-    transform:
-        translate(-50%, -50%)
-        scale(1.08);
-    filter:
-        drop-shadow(0 0 12px rgba(6, 71, 245, 0.35));
-}
-
-
-/* BIG HEART BROKEN HEART */
-
-.broken-heart {
-    position: absolute;
-    width: 135px;
-    height: 125px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    overflow: visible;
-    display: none;
-}
-
-
-.broken-left,
-.broken-right {
-    fill: #0647f5;
-}
-
-
-/* BREAKING STATE */
-
-.favorite-button.is-breaking .normal-heart {
-    display: none;
-}
-
-
-.favorite-button.is-breaking .broken-heart {
-    display: block;
-}
-
-
-/* BIG HEART - LEFT */
-
-.favorite-button.is-breaking .broken-left {
-    transform-origin: center;
-    animation: breakLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-
-/* BIG HEART - RIGHT HALF */
-
-.favorite-button.is-breaking .broken-right {
-    transform-origin: center;
-    animation: breakRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-
-/* HEART BREAK ANIMATIONS */
-
-@keyframes breakLeft {
-    0% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-24px) rotate(-8deg);
-        opacity: 0;
-    }
-}
-
-
-@keyframes breakRight {
-    0% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(24px) rotate(8deg);
-        opacity: 0;
-    }
+h2 {
+    font-size: 20px;
 }
 
 
 
-/* HEART CONTAINER */
+/* STACKS THE SMALL NAVIGATION HEART ABOVE THE LARGE FAVORITE HEART */
 
 .heart-container {
     display: flex;
@@ -185,16 +40,245 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 70px;
+    gap: 10px;
 }
 
 
 
-/* NAVIGATION FAVORITES BUTTON */
+/* CREATES THE INVISIBLE CLICKABLE AREA AROUND THE LARGE HEART */
+
+.favorite-button {
+    position: relative;
+
+    width: 150px;
+    height: 140px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+
+/* POSITIONS AND SIZES THE NORMAL LARGE HEART */
+
+.normal-heart {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    overflow: visible;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+
+/* MAKES THE LARGE HEART WHITE INSIDE WITH A BLUE OUTLINE */
+
+.normal-heart path {
+    fill: white;
+
+    stroke: #0647f5;
+    stroke-width: 4;
+    stroke-linejoin: round;
+
+    transition:
+        fill 0.25s ease,
+        stroke 0.25s ease;
+}
+
+
+
+/* SLIGHTLY ENLARGES THE LARGE HEART AND ADDS A BLUE SHADOW ON HOVER */
+
+.favorite-button:hover .normal-heart {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(6, 71, 245, 0.3)
+        );
+}
+
+
+
+/* FILLS THE LARGE HEART BLUE AFTER IT HAS BEEN FAVORITED */
+
+.favorite-button.is-favorite .normal-heart path {
+    fill: #0647f5;
+    stroke: #0647f5;
+}
+
+
+
+/* KEEPS THE BLUE FAVORITED HEART ENLARGED AND GLOWING ON HOVER */
+
+.favorite-button.is-favorite:hover .normal-heart {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(6, 71, 245, 0.35)
+        );
+}
+
+
+
+/* POSITIONS THE SECOND SVG USED ONLY FOR THE BROKEN HEART ANIMATION */
+
+.broken-heart {
+    position: absolute;
+
+    width: 135px;
+    height: 125px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    overflow: visible;
+
+    display: none;
+}
+
+
+
+/* COLORS BOTH HALVES OF THE BROKEN HEART BLUE */
+
+.broken-left,
+.broken-right {
+    fill: #0647f5;
+}
+
+
+
+/* HIDES THE NORMAL HEART WHILE THE BREAKING ANIMATION IS PLAYING */
+
+.favorite-button.is-breaking .normal-heart {
+    display: none;
+}
+
+
+
+/* SHOWS THE BROKEN HEART ONLY WHILE THE BREAKING ANIMATION IS PLAYING */
+
+.favorite-button.is-breaking .broken-heart {
+    display: block;
+}
+
+
+
+/* ANIMATES THE LEFT HALF OF THE HEART AWAY FROM THE CENTER */
+
+.favorite-button.is-breaking .broken-left {
+    transform-origin: center;
+
+    animation:
+        breakLeft
+        1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+
+/* ANIMATES THE RIGHT HALF OF THE HEART AWAY FROM THE CENTER */
+
+.favorite-button.is-breaking .broken-right {
+    transform-origin: center;
+
+    animation:
+        breakRight
+        1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+
+/* MOVES THE LEFT BROKEN HEART PIECE LEFT AND FADES IT OUT */
+
+@keyframes breakLeft {
+
+    0% {
+        transform:
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateX(-24px)
+            rotate(-8deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+
+/* MOVES THE RIGHT BROKEN HEART PIECE RIGHT AND FADES IT OUT */
+
+@keyframes breakRight {
+
+    0% {
+        transform:
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateX(24px)
+            rotate(8deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+
+/* PLACES THE WORD FAVORITES AND SMALL HEART NEXT TO EACH OTHER */
 
 .nav-favorite-button {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 
     border: none;
@@ -210,7 +294,7 @@ body {
 
 
 
-/* FAVORITES TEXT */
+/* CONTROLS THE SIZE OF THE WORD FAVORITES */
 
 .nav-label {
     font-size: 28px;
@@ -218,12 +302,13 @@ body {
 
 
 
-/* NAV HEART WRAPPER */
+/* CREATES A POSITIONING AREA FOR THE SMALL HEART AND ITS THREE LINES */
 
 .nav-heart-wrapper {
     position: relative;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -233,7 +318,7 @@ body {
 
 
 
-/* NAV HEART */
+/* CONTROLS THE SIZE AND MOVEMENT OF THE SMALL NAVIGATION HEART */
 
 .nav-heart {
     width: 55px;
@@ -243,9 +328,13 @@ body {
 
     transform: scale(1);
 
-    transition: transform 0.2s ease;
+    transition:
+        transform 0.2s ease;
 }
 
+
+
+/* MAKES THE NAVIGATION HEART WHITE WITH A THICK BLUE OUTLINE */
 
 .nav-heart path {
     fill: white;
@@ -258,7 +347,7 @@ body {
 
 
 
-/* THREE STREAKS */
+/* POSITIONS THE GROUP OF THREE BLUE LINES ABOVE THE NAVIGATION HEART */
 
 .nav-streaks {
     position: absolute;
@@ -269,13 +358,17 @@ body {
     left: 50%;
     top: -15px;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     opacity: 0;
 
     pointer-events: none;
 }
 
+
+
+/* CREATES THE BASIC SHAPE OF EACH BLUE STREAK */
 
 .streak {
     position: absolute;
@@ -290,50 +383,61 @@ body {
 
 
 
-/* LEFT STREAK */
+/* ANGLES THE LEFT STREAK OUTWARD */
 
 .streak-left {
     left: 7px;
     top: 9px;
 
-    transform: rotate(-35deg);
+    transform:
+        rotate(-35deg);
 }
 
 
 
-/* MIDDLE STREAK */
+/* POSITIONS THE MIDDLE STREAK STRAIGHT ABOVE THE HEART */
 
 .streak-middle {
     left: 50%;
     top: 2px;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 }
 
 
 
-/* RIGHT STREAK */
+/* ANGLES THE RIGHT STREAK OUTWARD */
 
 .streak-right {
     right: 7px;
     top: 9px;
 
-    transform: rotate(35deg);
+    transform:
+        rotate(35deg);
 }
 
 
 
-/* NAV HEART — HOVER ON */
+/* CHANGES THE CURSOR TO A POINTER WHEN HOVERING OVER FAVORITES */
 
 .nav-favorite-button:hover {
     cursor: pointer;
 }
 
 
+
+/* SHRINKS THE NAVIGATION HEART WHILE THE USER HOVERS OVER IT */
+
 .nav-favorite-button:hover .nav-heart {
-    transform: scaleX(0.8) scaleY(0.8);
+    transform:
+        scaleX(0.8)
+        scaleY(0.8);
 }
 
+
+
+/* MAKES THE THREE BLUE STREAKS APPEAR WHILE HOVERING */
 
 .nav-favorite-button:hover .nav-streaks {
     opacity: 1;
@@ -341,12 +445,16 @@ body {
 
 
 
-/* NAV HEART — MOUSE DOWN */
+/* ENLARGES THE NAVIGATION HEART WHILE THE MOUSE BUTTON IS HELD DOWN */
 
 .nav-favorite-button:active .nav-heart {
-    transform: scale(1.2);
+    transform:
+        scale(1.2);
 }
 
+
+
+/* ENLARGES THE THREE STREAKS WHILE THE MOUSE BUTTON IS HELD DOWN */
 
 .nav-favorite-button:active .nav-streaks {
     opacity: 1;
@@ -358,49 +466,63 @@ body {
 
 
 
-/* POP CAUSED BY MAIN HEART */
+/* PLAYS A POP ANIMATION ON THE NAVIGATION HEART WHEN THE LARGE HEART IS FAVORITED */
 
 .nav-favorite-button.nav-pop .nav-heart {
-    animation: navHeartPop 0.6s ease;
+    animation:
+        navHeartPop
+        0.6s
+        ease;
 }
 
+
+
+/* PLAYS A MATCHING POP ANIMATION ON THE THREE BLUE STREAKS */
 
 .nav-favorite-button.nav-pop .nav-streaks {
-    animation: navStreakPop 0.6s ease;
+    animation:
+        navStreakPop
+        0.6s
+        ease;
 }
 
 
 
-/* HEART POP */
+/* MAKES THE NAVIGATION HEART POP OUT AND SETTLE BACK TO NORMAL */
 
 @keyframes navHeartPop {
 
     0% {
-        transform: scale(1);
+        transform:
+            scale(1);
     }
 
     40% {
-        transform: scale(1.3);
+        transform:
+            scale(1.3);
     }
 
     70% {
-        transform: scale(0.9);
+        transform:
+            scale(0.9);
     }
 
     100% {
-        transform: scale(1);
+        transform:
+            scale(1);
     }
 
 }
 
 
 
-/* STREAK POP */
+/* MAKES THE THREE BLUE STREAKS POP OUT AND THEN DISAPPEAR */
 
 @keyframes navStreakPop {
 
     0% {
         opacity: 0;
+
         transform:
             translateX(-50%)
             scale(0.5);
@@ -424,6 +546,87 @@ body {
         transform:
             translateX(-50%)
             scale(1);
+    }
+
+}
+
+
+
+/* CREATES THE TWO-COLUMN INFORMATION AREA UNDER THE HEARTS */
+
+.main-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    padding: 20px;
+
+    margin-top: 60px;
+}
+
+
+
+/* CREATES EACH LARGE LIGHT BLUE INFORMATION COLUMN */
+
+.blue-container {
+    background-color:
+        rgb(180, 193, 214);
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    border-radius: 20px;
+}
+
+
+
+/* CREATES EACH WHITE INFORMATION BOX INSIDE THE BLUE COLUMNS */
+
+.white-container {
+    width: 100%;
+
+    background-color: white;
+
+    padding: 20px;
+
+    min-height: 150px;
+
+    border-radius: 15px;
+}
+
+
+
+/* REMOVES EXTRA SPACE ABOVE HEADINGS INSIDE WHITE BOXES */
+
+.white-container h2 {
+    margin-top: 0;
+}
+
+
+
+/* REMOVES EXTRA SPACE UNDER PARAGRAPHS INSIDE WHITE BOXES */
+
+.white-container p {
+    margin-bottom: 0;
+}
+
+
+
+/* STACKS THE TWO INFORMATION COLUMNS ON SMALLER SCREENS */
+
+@media (max-width: 800px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
     }
 
 }

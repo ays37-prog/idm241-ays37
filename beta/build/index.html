@@ -2,43 +2,105 @@
 <html lang="en">
 
 <head>
+
+    <!-- SETS UP CHARACTER ENCODING AND RESPONSIVE SCREEN SIZE -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- TEXT THAT APPEARS IN THE BROWSER TAB -->
     <title>Favorite Heart Microinteraction</title>
+
+    <!-- CONNECTS THIS HTML PAGE TO THE CSS FILE -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
+    <!-- HOLDS BOTH INTERACTIVE HEARTS AT THE TOP OF THE PAGE -->
     <main class="heart-container">
 
-    <!-- NAVIGATION FAVORITES HEART -->
 
-    <button
-        class="nav-favorite-button"
-        id="navFavoriteButton"
-        type="button"
-        aria-label="Open favorites"
-    >
+        <!-- NAVIGATION FAVORITES HEART WITH THE WORD FAVORITES -->
 
-        <span class="nav-label">Favorites</span>
+        <button
+            class="nav-favorite-button"
+            id="navFavoriteButton"
+            type="button"
+            aria-label="Open favorites"
+        >
 
-        <span class="nav-heart-wrapper">
-
-            <!-- Three streaks -->
-            <span class="nav-streaks" aria-hidden="true">
-                <span class="streak streak-left"></span>
-                <span class="streak streak-middle"></span>
-                <span class="streak streak-right"></span>
+            <!-- DISPLAYS THE WORD FAVORITES NEXT TO THE SMALL HEART -->
+            <span class="nav-label">
+                Favorites
             </span>
 
-            <!-- Navigation heart -->
+
+            <!-- HOLDS THE NAVIGATION HEART AND ITS THREE POP LINES -->
+            <span class="nav-heart-wrapper">
+
+
+                <!-- THREE BLUE LINES THAT APPEAR ABOVE THE HEART -->
+                <span
+                    class="nav-streaks"
+                    aria-hidden="true"
+                >
+
+                    <span class="streak streak-left"></span>
+
+                    <span class="streak streak-middle"></span>
+
+                    <span class="streak streak-right"></span>
+
+                </span>
+
+
+                <!-- SMALL NAVIGATION HEART -->
+                <svg
+                    class="nav-heart"
+                    viewBox="0 0 100 90"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M50 82
+                           C44 76 12 55 7 32
+                           C3 13 16 4 30 5
+                           C40 5 47 11 50 18
+                           C53 11 60 5 70 5
+                           C84 4 97 13 93 32
+                           C88 55 56 76 50 82Z"
+                    />
+
+                </svg>
+
+            </span>
+
+        </button>
+
+
+
+        <!-- LARGE FAVORITE TOGGLE HEART -->
+
+        <button
+            class="favorite-button"
+            id="favoriteButton"
+            type="button"
+            aria-label="Add to favorites"
+            aria-pressed="false"
+        >
+
+
+            <!-- NORMAL LARGE HEART USED WHEN FAVORITED OR UNFAVORITED -->
+
             <svg
-                class="nav-heart"
+                class="heart normal-heart"
                 viewBox="0 0 100 90"
                 aria-hidden="true"
             >
+
                 <path
                     d="M50 82
                        C44 76 12 55 7 32
@@ -48,83 +110,545 @@
                        C84 4 97 13 93 32
                        C88 55 56 76 50 82Z"
                 />
+
             </svg>
 
-        </span>
-
-    </button>
 
 
+            <!-- BROKEN HEART THAT APPEARS DURING THE UNFAVORITE ANIMATION -->
 
-    <!-- MAIN FAVORITE HEART -->
-
-    <button
-        class="favorite-button"
-        id="favoriteButton"
-        type="button"
-        aria-label="Add to favorites"
-        aria-pressed="false"
-    >
-
-        <!-- Normal heart -->
-        <svg
-            class="heart normal-heart"
-            viewBox="0 0 100 90"
-            aria-hidden="true"
-        >
-            <path
-                d="M50 82
-                   C44 76 12 55 7 32
-                   C3 13 16 4 30 5
-                   C40 5 47 11 50 18
-                   C53 11 60 5 70 5
-                   C84 4 97 13 93 32
-                   C88 55 56 76 50 82Z"
-            />
-        </svg>
+            <svg
+                class="broken-heart"
+                viewBox="0 0 120 100"
+                aria-hidden="true"
+            >
 
 
-        <!-- Broken heart -->
-        <svg
-            class="broken-heart"
-            viewBox="0 0 120 100"
-            aria-hidden="true"
-        >
+                <!-- LEFT HALF OF THE BROKEN HEART -->
 
-            <path
-                class="broken-left"
-                d="M58 90
-                   C47 80 14 59 9 34
-                   C5 15 18 5 33 6
-                   C45 6 53 14 59 24
-                   L51 38
-                   L59 49
-                   L50 61
-                   L58 90Z"
-            />
+                <path
+                    class="broken-left"
+                    d="M58 90
+                       C47 80 14 59 9 34
+                       C5 15 18 5 33 6
+                       C45 6 53 14 59 24
+                       L51 38
+                       L59 49
+                       L50 61
+                       L58 90Z"
+                />
 
-            <path
-                class="broken-right"
-                d="M62 90
-                   L70 61
-                   L61 49
-                   L69 38
-                   L61 24
-                   C67 14 75 6 87 6
-                   C102 5 115 15 111 34
-                   C106 59 73 80 62 90Z"
-            />
 
-        </svg>
+                <!-- RIGHT HALF OF THE BROKEN HEART -->
 
-    </button>
+                <path
+                    class="broken-right"
+                    d="M62 90
+                       L70 61
+                       L61 49
+                       L69 38
+                       L61 24
+                       C67 14 75 6 87 6
+                       C102 5 115 15 111 34
+                       C106 59 73 80 62 90Z"
+                />
 
-</main>
+            </svg>
+
+        </button>
+
+    </main>
 
 
 
+    <!-- HOLDS THE TWO LARGE INFORMATION COLUMNS UNDER THE HEARTS -->
+
+    <main class="main-grid">
 
 
+        <!-- LEFT COLUMN EXPLAINS THE LARGE FAVORITE TOGGLE -->
+
+        <section class="blue-container">
+
+            <h1>1. Favorite Toggle</h1>
+
+            <!-- TRIGGER INFORMATION -->
+
+            <div class="white-container">
+
+                <h2>TRIGGERS</h2>
+
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Click ON</li>
+                    <li>Click OFF</li>
+                </ul>
+
+            </div>
+
+
+
+            <!-- RULES FOR THE LARGE FAVORITE TOGGLE -->
+
+            <div class="white-container">
+
+                <h2>RULES</h2>
+
+                <br>
+
+
+                <!-- EXPLAINS WHAT HAPPENS WHEN THE HEART IS HOVERED -->
+
+                <h2>Hover ON</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from an arrow to a pointer hand.
+                    </li>
+
+                    <li>
+                        Heart drops a faint light blue shadow that borders its
+                        blue border on all sides.
+                    </li>
+
+                    <li>
+                        Heart slighly grows in size from 1.0 to 1.08
+                    </li>
+
+                </ul>
+
+
+
+                <!-- EXPLAINS WHAT HAPPENS WHEN THE USER STOPS HOVERING -->
+
+                <h2>Hover OFF</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from pointer hand back to the
+                        default arrow.
+                    </li>
+
+                    <li>
+                        Faint blue shadow is removed around the blue border outline
+                        of the heart.
+                    </li>
+
+                    <li>
+                        Heart slightly shrinks from 1.08 and returns to the
+                        default size at 1.0
+                    </li>
+
+                </ul>
+
+
+
+                <!-- EXPLAINS WHAT HAPPENS WHEN THE HEART IS FAVORITED -->
+
+                <h2>Click ON</h2>
+
+                <ul>
+
+                    <li>
+                        Heart changes from a the white/empty state to a solid
+                        blue filled state, with the blue outline.
+                    </li>
+
+                    <li>
+                        Product changes from unfavorited to favorited in the
+                        database.
+                    </li>
+
+                </ul>
+
+
+
+                <!-- EXPLAINS WHAT HAPPENS WHEN THE HEART IS UNFAVORITED -->
+
+                <h2>Click OFF</h2>
+
+                <ul>
+
+                    <li>
+                        Heart undergoes a heartbreak animation (lasting 1 second),
+                        cracking in half evenly, and both pieces drifting apart.
+                    </li>
+
+                    <li>
+                        Heart returns to the unbroken default state with solid white/empty
+                        fill, and only a blue border.
+                    </li>
+
+                    <li>
+                        Product changes from favorited to unfavorited in the
+                        database.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- VISUAL FEEDBACK FOR THE LARGE FAVORITE TOGGLE -->
+
+            <div class="white-container">
+
+                <h2>FEEDBACK</h2>
+
+                <br>
+
+
+                <h2>Hover ON</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from an arrow to a pointer hand.
+                    </li>
+
+                    <li>
+                        Heart drops a faint light blue shadow that borders its
+                        blue border on all sides.
+                    </li>
+
+                    <li>
+                        Heart slighly grows in size from 1.0 to 1.08
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Hover OFF</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from pointer hand back to the default arrow.
+                    </li>
+
+                    <li>
+                        Faint blue shadow is removed from the border outline
+                        of the heart.
+                    </li>
+
+                    <li>
+                        Heart slightly shrinks from 1.08 and returns to the
+                        default size at 1.0
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Click ON</h2>
+
+                <ul>
+
+                    <li>
+                        Heart changes from a the white/empty state to a solid
+                        blue filled state, with the blue outline.
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Click OFF</h2>
+
+                <ul>
+
+                    <li>
+                        Heart undergoes a heartbreak animation (lasting 1 second),
+                        cracking in half evenly, and both pieces drifting apart.
+                    </li>
+
+                    <li>
+                        Heart returns to the unbroken default state with solid white/empty
+                        fill, and only a blue border.
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- LOOP AND MODE INFORMATION -->
+
+            <div class="white-container">
+
+                <h2>LOOP &amp; MODES</h2>
+
+                <ul>
+                    <li>N/A</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT COLUMN EXPLAINS THE NAVIGATION FAVORITES BUTTON -->
+
+        <section class="blue-container">
+
+            <h1>2. Favorites Tab Button</h1>
+
+
+
+            <!-- TRIGGER INFORMATION -->
+
+            <div class="white-container">
+
+                <h2>TRIGGERS</h2>
+
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>Mouse DOWN</li>
+                    <li>Mouse UP</li>
+                    <li>Favorite Toggle Clicked</li>
+                </ul>
+
+            </div>
+
+
+
+            <!-- RULES FOR THE NAVIGATION FAVORITES BUTTON -->
+
+            <div class="white-container">
+
+                <h2>RULES</h2>
+
+                <br>
+
+
+                <h2>Hover ON</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from an arrow to a pointer hand.
+                    </li>
+
+                    <li>
+                        Heart icon slighly decreases in size from 1.0 to 0.8
+                    </li>
+
+
+                    <li>
+                        3 short streaks pop out at the top of the favorite's tab button
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Hover OFF</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from pointer hand back to the default arrow.
+                    </li>
+
+                    <li>
+                        Heart icon slighly increases in size from 0.8 to 1.0
+                    </li>
+
+                    <li>
+                        3 short streaks at the top
+                        of the favorite tab button dissapear
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Mouse DOWN</h2>
+
+                <ul>
+
+                    <li>
+                        Heart icon increases in size from 1.0 to 1.2. It only
+                        stays at this size while the cursor is actively pressing
+                        down on the favorites button.
+                    </li>
+
+                    <li>
+                        The 3 short streaks/lines that popped out at the top
+                        of the favorite icon increase in size from 1.0 to 1.2. It only stays 
+                        at this size while the cursor is actively pressing down on the favorite's button.
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Mouse UP</h2>
+
+                <ul>
+
+                    <li>
+                        The heart icon then decreases in size from 1.2 to 1.0.
+                    </li>
+
+                    <li>
+                        The 3 short streaks/lines that popped out at the top
+                        of the favorite icon shrink in size from 1.2 to 1.0, and dissapear entirely
+                    </li>
+
+                    <li>
+                        Page opens to "My Favorites""
+                    </li>
+
+                </ul>
+
+                 <h2>Favorite Toggle Clicked</h2>
+
+                <ul>
+
+                    <li>
+                        The navigation heart icon undergoes a pop animation, 
+                        increasing in size from 1,0 to 1.3, then shrinking to 0.9, then returning to 1.0 
+
+                    </li>
+
+                    <li>
+                        The 3 short streaks/lines at above the favorite tab heart undergo a pop animation,
+                         increasing in size from 0.5 to 1.25, then decreasing to 1.0
+                    </li>
+
+                    <li>
+                        Page opens to "My Favorites""
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- VISUAL FEEDBACK FOR THE NAVIGATION FAVORITES BUTTON -->
+
+            <div class="white-container">
+
+                <h2>FEEDBACK</h2>
+
+                <br>
+
+
+                <h2>Hover ON</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from an arrow to a pointer hand.
+                    </li>
+
+                    <li>
+                        Heart icon slighly decreases in size from 1.0 to 0.8
+                    </li>
+
+                    <li>
+                        3 short streaks pop out at the top of the favorite's tab button
+                    </li>
+
+
+                </ul>
+
+
+
+                <h2>Hover OFF</h2>
+
+                <ul>
+
+                    <li>
+                        Cursor changes from pointer hand back to the default arrow.
+                    </li>
+
+                    <li>
+                        Heart icon slighly increases in size from 0.8 to 1.0
+                    </li>
+
+                    <li>
+                        3 short streaks at the top
+                        of the favorite tab button dissapear
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Mouse DOWN</h2>
+
+                <ul>
+
+                    <li>
+                        Heart icon increases in size from 1.0 to 1.2. It only
+                        stays at this size while the cursor is actively pressing
+                        down on the favorites button.
+                    </li>
+
+                    <li>
+                        The 3 short streaks/lines that popped out at the top
+                        of the favorite icon increase in size from 1.0 to 1.2. It only stays 
+                        at this size while the cursor is actively pressing down on the favorite's button.
+                    </li>
+
+                </ul>
+
+
+
+                <h2>Mouse UP</h2>
+
+                <ul>
+
+                    <li>
+                        The heart icon then decreases in size from 1.2 to 1.0.
+                    </li>
+
+                    <li>
+                        The 3 short streaks/lines that popped out at the top
+                        of the favorite icon shrink in size from 1.2 to 1.0, and dissapear entirely
+                    </li>
+
+                    <li>
+                        Page opens to "My Favorites""
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- LOOP AND MODE INFORMATION -->
+
+            <div class="white-container">
+
+                <h2>LOOPS &amp; MODES</h2>
+
+                <ul>
+                    <li>N/A</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- CONNECTS THE JAVASCRIPT THAT CONTROLS THE HEART INTERACTIONS -->
 
     <script src="script.js"></script>
 
@@ -132,4 +656,3 @@
 </body>
 
 </html>
-
