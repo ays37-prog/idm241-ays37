@@ -68,8 +68,8 @@ h2 {
 .normal-heart {
     position: absolute;
 
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
 
     left: 50%;
     top: 50%;
@@ -93,7 +93,7 @@ h2 {
     fill: white;
 
     stroke: #0647f5;
-    stroke-width: 4;
+    stroke-width: 6;
     stroke-linejoin: round;
 
     transition:
@@ -637,7 +637,7 @@ h2 {
     width: 100%;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     padding: 10px 30px;
@@ -651,4 +651,51 @@ h2 {
     background-color: white;
 
     border-bottom: 1px solid #dddddd;
+}
+
+/* CREATES THE CARD AROUND THE BACKPACK AND HEART */
+
+.product-card {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background-color: white;
+    
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+
+    border: 1px solid rgb(183, 183, 183);
+    border-radius: 20px;
+}
+
+
+/* CONTROLS THE BACKPACK IMAGE AT THE TOP OF THE CARD */
+
+.product-image {
+    display: block;
+
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* KEEPS THE ENTIRE PRODUCT CARD CENTERED HORIZONTALLY */
+
+.heart-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
 }
