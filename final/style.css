@@ -1,0 +1,167 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0px;
+
+}
+
+p,
+li {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+    line-height: 1.2rem;
+}
+
+
+
+
+
+
+.gray-container {
+    width: 100%;
+    background-color: rgb(164, 183, 223);
+    text-align: center;
+    padding: 50px 30px;
+}
+
+
+.gray-container p {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.main-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+.blue-container {
+    background-color: rgb(215, 221, 230);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border-radius: 20px;
+}
+
+
+
+
+.white-container {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    min-height: 150px;
+    border-radius: 15px;
+}
+
+.white-container h2 {
+    margin-top: 0;
+}
+
+.white-container p {
+    margin-bottom: 0;
+}
+
+
+
+
+.blue-button {
+    display: block;
+    width: 190px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 15px auto 0 auto;
+    background-color: rgb(0, 64, 192);
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blue-button:hover {
+    background-color: rgb(50, 118, 255);
+}
+
+
+
+
+.logo-container {
+    display: block;
+    width: 70vw;
+    max-width: 70vw;
+    height: auto;
+    margin: 24px auto;
+}
+
+.logo-container img {
+    width: 50px;
+}
+
+
+
+
+.screenshots {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin: 32px auto 10px auto;
+    border-radius: 8px;
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

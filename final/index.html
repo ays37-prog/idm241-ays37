@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marhslls Final Description</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <section class="gray-container">
+        <div class="logo-container">
+        <img src="images/logo.png" alt="Marshalls logo">
+        </div>
+
+        <h1>Marshalls</h1>
+        <h2>Final Description</h2>
+        <p>Origional Interaction:</p>
+
+        <a href="https://www.marshalls.com/us/store/jump/product/new-arrivals/6pc-Teakwood-Utensil-Set/4000456779?colorId=NS4154737&pos=1:17&N=842114098"
+        class="blue-button"
+        target="_blank">Favoriting an Item</a>
+    </section>
+
+
+    <!-- THREE BLUE COLUMNS -->
+
+    <main class="main-grid">
+
+
+
+        <!-- COLUMN 1 -->
+        <section class="blue-container">
+            <h1>1. Favorite Toggle</h1>
+            
+            <div class="white-container">
+            <h2>LOCATION</h2>
+            <ul><li>The Favorite Product Toggle will be found in the top right corner of a product card.</li></ul>
+            </div>
+
+            <div class="white-container">
+            <h2>TRIGGERS</h2>
+            <ul>
+            <li>Hover ON</li>
+            <li>Hover OFF</li>
+            <li>Click ON</li>
+            <li>Click OFF</li>
+            </ul>
+            </div>
+
+
+            <!-- 1. RULES -->
+            <div class="white-container">
+                <h2>RULES</h2>
+                <br>
+
+
+                <h2>Hover ON</h2>
+                <ul>
+                <li>Cursor changes from an arrow to a pointer hand.</li>
+                <li>Circular Heart button drops a faint light blue shadow.</li>
+                </ul>
+
+
+                <h2>Hover OFF</h2>
+                <ul>
+                <li>Cursor changes from pointer hand back to the default arrow.</li>
+                <li>Faint blue shadow is removed from around the circular heart button. </li>
+                </ul>
+
+
+                <h2>Click ON</h2>
+                <ul>
+                <li>Heart icon changes from a the white/empty state to a solid blue filled state, with the blue outline.</li>
+                <li>Product undergoes one bounce animation, growing, then shrinking, then growing back to its origional size.</li>
+                <li>Product changes from unfavorited to favorited in the database.</li>
+                </ul>
+
+
+                <h2>Click OFF</h2>
+                <ul>
+                <li>Heart icon undergoes a heart split animation (lasting 1 second), cracking in half with a white gap separating the left and right heart pieces. 
+                    The pieces animate outwards smoothly.</li>
+                <li>Heart icon returns to one singular unified piece with solid white/empty fill.</li>
+                <li>Product changes from favorited to unfavorited in the database.</li>
+                </ul>
+                </div>
+
+
+                <!-- 1. FEEDBACK -->
+                <div class="white-container">
+                <h2>FEEDBACK</h2>
+                <br>
+
+                <h2>Hover ON</h2>
+                <ul>
+                <li>Cursor changes from an arrow to a pointer hand.</li>
+                <li>Circular Heart button drops a faint light blue shadow.</li>
+                </ul>
+
+
+                <h2>Hover OFF</h2>
+                <ul>
+                <li>Cursor changes from pointer hand back to the default arrow.</li>
+                <li>Faint blue shadow is removed from around the circular heart button. </li>
+                </ul>
+
+
+                <h2>Click ON</h2>
+                <ul>
+                <li>Heart icon changes from a the white/empty state to a solid blue filled state, with the blue outline.</li>
+                <li>Product undergoes one bounce animation, growing, then shrinking, then growing back to its origional size.</li>
+                </ul>
+
+
+                <h2>Click OFF</h2>
+                <ul>
+                <li>Heart icon undergoes a heart split animation (lasting 1 second), cracking in half with a white gap separating the left and right heart pieces. 
+                    The pieces animate outwards smoothly.</li>
+                <li>Heart icon returns to one singular unified piece with solid white/empty fill.</li>
+                </ul>
+                </div>
+
+
+                <!-- 1. LOOPS & MODES -->
+                <div class="white-container">
+                <h2>LOOP & &MODES</h2>
+                <ul>
+                <li>N/A</li>
+                </ul>
+                </div>
+                </section>
+
+
+
+
+
+        <!-- COLUMN 2 -->
+        <section class="blue-container">
+            <h1>2. Favorites Page Navigation Button</h1>
+
+            <div class="white-container">
+            <h2>LOCATION</h2>
+            <ul><li>The Favorites Page Navigation Button is found in the top navigation bar.</li></ul>
+            </div>
+
+
+            <div class="white-container">
+            <h2>TRIGGERS</h2>
+            <ul>
+            <li>Hover ON</li>
+            <li>Hover OFF</li>
+            <li>Click ON</li>
+            <li>Item Added / Removed from Favorites</li>
+            </ul>
+            </div>
+
+
+            <!-- 2. RULES -->
+            <div class="white-container">
+            <h2>RULES</h2>
+            <br>
+
+
+            <h2>Hover ON</h2>
+            <ul>
+            <li>Cursor changes from an arrow to a pointer hand.</li>
+            <li>Heart icon slighly increases in size.</li>
+            </ul>
+
+                
+            <h2>Hover OFF</h2>
+            <ul>
+            <li>Cursor changes from the pointer hand back to the default arrow.</li>
+            <li>Heart icon slighly dacreases in size.</li>
+            </ul>
+                
+
+            <h2>Click ON</h2>
+            <ul>
+            <li>Heart icon undergoes 1 bounce animation, growing in size, then shrinking, then growing back to its origional size.
+            <li>Page opens to the "My Favorites" tab and displays every favorited item below in their own product card. </li>
+            </ul>
+
+
+            <h2>Item Added / Removed from Favorites</h2>
+            <ul>
+            <li>Heart icon undergoes 1 bounce animation, growing in size, then shrinking, then growing back to its origional size.
+            <li>Favorited items counter increases by 1 integer if an item is favorited.</li>
+            <li>Favorited items counter decreases by 1 integer if an item is unfavorited.</li>
+            </ul>
+            </div>
+
+
+            <!-- 2. FEEDBACK -->   
+            <div class="white-container">
+            <h2>FEEDBACK</h2>
+            <br>
+           
+            <h2>Hover ON</h2>
+            <ul>
+            <li>Cursor changes from an arrow to a pointer hand.</li>
+            <li>Heart icon slighly increases in size.</li>
+            </ul>
+
+                
+            <h2>Hover OFF</h2>
+            <ul>
+            <li>Cursor changes from the pointer hand back to the default arrow.</li>
+            <li>Heart icon slighly dacreases in size.</li>
+            </ul>
+                
+
+            <h2>Click ON</h2>
+            <ul>
+            <li>Heart icon undergoes 1 bounce animation, growing in size, then shrinking, then growing back to its origional size.
+            <li>Page opens to the "My Favorites" tab and displays every favorited item below in their own product card. </li>
+            </ul>
+
+
+            <h2>Item Added / Removed from Favorites</h2>
+            <ul>
+            <li>Heart icon undergoes 1 bounce animation, growing in size, then shrinking, then growing back to its origional size.
+            <li>Favorited items counter increases by 1 integer if an item is favorited.</li>
+            <li>Favorited items counter decreases by 1 integer if an item is unfavorited.</li>
+            </ul>
+            </div>
+
+
+            <div class="white-container">
+            <h2>LOOPS & MODES</h2>
+            <ul>
+            <li>N/A</li>
+            </ul>
+            </div>
+        </section>
+
+
+
+<!-- COLUMN 3 -->
+        <section class="blue-container">
+            <h1>3. Add to Cart Button</h1>
+            
+            <div class="white-container">
+            <h2>LOCATION</h2>
+            <ul><li>The Add to Cart Button is found at the bottom of each product card.</li></ul>
+            </div>
+
+            <div class="white-container">
+            <h2>TRIGGERS</h2>
+            <ul>
+            <li>Hover ON</li>
+            <li>Hover OFF</li>
+            <li>Click ON</li>
+            <li>Click OFF</li>
+            </ul>
+            </div>
+
+
+            <!-- 3. RULES -->
+            <div class="white-container">
+                <h2>RULES</h2>
+                <br>
+
+
+                <h2>Hover ON</h2>
+                <ul>
+                <li>Cursor changes from an arrow to a pointer hand.</li>
+                <li>A rightwards pointing arrow is added before "Add to Bag" label. All text is white.</li>
+                <li>Entire text label is swiped rightwards slightly from its default centered position.</li>
+                <li>Rounded light blue underlay swipes in from the left, moving rightwards with the label/text content.</li>
+                </ul>
+
+
+                <h2>Hover OFF</h2>
+                <ul>
+                <li>Cursor changes from pointer hand back to the default arrow.</li>
+                <li>The rightwards pointing arrow is removed before "Add to Bag" label.</li>
+                <li>Entire label is swiped back to its normal centered position.</li>
+                <li>Rounded light blue underlay swipes back to the left with the label/text content, dissapearing, having only the solid dark blue background fill.</li>
+                </ul>
+
+
+                <h2>Click ON</h2>
+                <ul>
+                <li>Entire "Add to Bag" label swipes rightwards, dissapearing from screen.</li>
+                <li>The new "Remove from Bag" label swipes in from the left to the center of the button. This text is dark blue.</li>
+                <li>Rounded light blue underlay completely swipes rightwards, filling in the entire button.</li>
+                <li>Product changes from "Not in Bag" to "Added to Bag" in database.</li>
+                </ul>
+
+
+                <h2>Click OFF</h2>
+                <ul>
+                <li>Entire "Remove from Bag" label swipes rightwards, dissapearing from screen.</li>
+                <li>Rounded light blue overlay swipes rightwards, dissapearing from screen, revealing the default solid dark blue background.</li>
+                <li>White "Add to Bag" text swipes in rightwards, stopping at the center of the button.</li>
+                <li>Product changes from "Added to Bag" to "Not in Bag" in database.</li>
+                </ul>
+                </div>
+
+
+                <!-- 3. FEEDBACK -->
+                <div class="white-container">
+                <h2>FEEDBACK</h2>
+                <br>
+
+                <h2>Hover ON</h2>
+                <ul>
+                <li>Cursor changes from an arrow to a pointer hand.</li>
+                <li>A rightwards pointing arrow is added before "Add to Bag" label. All text is white.</li>
+                <li>Entire text label is swiped rightwards slightly from its default centered position.</li>
+                <li>Rounded light blue underlay swipes in from the left, moving rightwards with the label/text content.</li>
+                </ul>
+
+
+                <h2>Hover OFF</h2>
+                <ul>
+                <li>Cursor changes from pointer hand back to the default arrow.</li>
+                <li>The rightwards pointing arrow is removed before "Add to Bag" label.</li>
+                <li>Entire label is swiped back to its normal centered position.</li>
+                <li>Rounded light blue underlay swipes back to the left with the label/text content, dissapearing, having only the solid dark blue background fill.</li>
+                </ul>
+
+
+                <h2>Click ON</h2>
+                <ul>
+                <li>Entire "Add to Bag" label swipes rightwards, dissapearing from screen.</li>
+                <li>The new "Remove from Bag" label swipes in from the left to the center of the button. This text is dark blue.</li>
+                <li>Rounded light blue underlay completely swipes rightwards, filling in the entire button.</li>
+                </ul>
+
+
+                <h2>Click OFF</h2>
+                <ul>
+                <li>Entire "Remove from Bag" label swipes rightwards, dissapearing from screen.</li>
+                <li>Rounded light blue overlay swipes rightwards, dissapearing from screen, revealing the default solid dark blue background.</li>
+                <li>White "Add to Bag" text swipes in rightwards, stopping at the center of the button.</li>
+                </ul>
+                </div>
+
+
+
+
+                <div class="white-container">
+                <h2>LOOP & &MODES</h2>
+                <ul>
+                <li>N/A</li>
+                </ul>
+                </div>
+                </section>
+        </section>
+    </main>
+
+
+
+
+    <!-- BOTTOM BLUE SECTION -->
+    <section class="gray-container">
+
+        <h1>1. Favorite Toggle & Add to Cart Animation</h1>
+        <p>The diagram below shows the microinteraction of the Favorite Toggle undergoing its animation, as well as the add to Cart Animation. 
+            Notes regarding each visual change at different stages are encapsulated in light gray boxes and are not part of the interaction.</p>
+
+        <img class="screenshots"
+            src="images/home.png"
+            alt="Marshalls Favorite heart favorite & unfavorite animation">
+        <br><br><br>
+
+
+
+        <h1>2. Favorites Page Tab Navigation Button Animation</h1>
+        <p>The diagram below shows the microinteraction of the Favorites Page Navigation Button undergoing its animation.
+            Notes reguarging eachvisual change for differentstate changes areencapsulated in gray boxes and are not part of the interaction.
+        </p>
+        <img class="screenshots"
+            src="images/favorites.png"
+            alt="Marshalls Favorite heart favorite & unfavorite animation">
+            <br><br><br>                
+    </section>
+</body>
+</html>
